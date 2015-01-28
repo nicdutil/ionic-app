@@ -32,7 +32,7 @@ angular.module('starter', ['ionic','dataServices'])
             if (window.StatusBar) {
                 StatusBar.styleDefault();
             }
-            $ionicLoading.show({'template':'Loading...'});
+  //          $ionicLoading.show({'template':'Loading...'});
         });
     }).
     controller('listCtrl', function ($scope, $window, $timeout, $ionicLoading, imageService,$ionicModal) {
@@ -48,7 +48,7 @@ angular.module('starter', ['ionic','dataServices'])
         imageService.getImageName().then(function(response) {
             if (response.status === 200) {
                 $scope.items = response.data;
-                $timeout($ionicLoading.hide,10);
+//                $timeout($ionicLoading.hide,10);
             }
         });
         $scope.showPicture = function(item,index) {
